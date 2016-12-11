@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Calendar</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+        <!-- <link rel="stylesheet" href="public/third_party/bootstrap/bootstrap.min.css"> -->
+        <link href="public/css/main.css" rel="stylesheet">
+        
+        <script src="http://code.angularjs.org/1.2.7/angular.js"></script>
+        <script src="http://code.angularjs.org/1.2.7/angular-resource.js"></script>
+        <script src="http://code.angularjs.org/1.2.7/angular-route.js"></script>
+
+        <script src="vendor/angular-dialog/ngDialog.js"></script>
+        <link rel="stylesheet" href="vendor/angular-dialog/ngDialog.css" />
+        <link rel="stylesheet" href="vendor/angular-dialog/ngDialog-theme-default.css" />
+                    
+        <script src="app/constants.js"></script>
+        <script src="app/utilities/date.js"></script>  
+        <script src="app/utilities/localStorage.js"></script> 
+        <script src="app/services/eventService.js"></script>
+        <script src="app/filters/timeFormat.js"></script>         
+        <script src="app/controllers/weekController.js"></script>
+        
+        <script src="app/app.js"></script>        
+    </head>
+    <body ng-app="calendarApp">
+        <header></header>
+        <div ng-view></div>         
+    </body>
+</html>

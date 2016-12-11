@@ -1,0 +1,20 @@
+<div class="col-lg-12">
+    <div class="col-time">&nbsp;</div>
+    <div class="col-header col-row-7" ng-repeat="date in week_dates">{{date.short}}</div>
+    <div class="clearfix"></div>
+    <div style="overflow-y: scroll; height: 500px;">
+        <div ng-repeat="time in Constants.Hours">
+            <div class="col-time">
+                {{time | timeFormatfilter}}
+            </div>
+            <div class="col-data col-row-7" ng-repeat="date in week_dates">
+                <span ng-if="events.events['id_' + date.date + '_' + time]" ng-click="showPopup('views/partials/_add.event.html', events.events['id_' + date.date + '_' + time])" class="bg-primary" data-toggle="tooltip" data-placement="bottom" title='{{events.events["id_" + date.date + "_" + time].title}} &#10;Date: {{date.date}}&#10;Time: {{time | timeFormatfilter}}'>
+                    {{events.events["id_" + date.date + "_" + time].title || "&nbsp;"}}
+                </span>
+                <span ng-if="!events.events['id_' + date.date + '_' + time]" ng-click="showPopup('views/partials/_add.event.html', {date: date.date, time: time})">
+                    {{"&nbsp;"}}
+                </span>
+            </div>    
+        </div>
+    </div>
+</div> 
